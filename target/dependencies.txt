@@ -1,0 +1,10 @@
+digraph "org.example:temp:jar:1.0-SNAPSHOT" { 
+	"org.example:temp:jar:1.0-SNAPSHOT" -> "com.microsoft.playwright:playwright:jar:1.35.1:compile" ; 
+	"org.example:temp:jar:1.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+	"com.microsoft.playwright:playwright:jar:1.35.1:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+	"com.microsoft.playwright:playwright:jar:1.35.1:compile" -> "org.opentest4j:opentest4j:jar:1.2.0:compile" ; 
+	"com.microsoft.playwright:playwright:jar:1.35.1:compile" -> "com.microsoft.playwright:driver:jar:1.35.1:compile" ; 
+	"com.microsoft.playwright:playwright:jar:1.35.1:compile" -> "com.microsoft.playwright:driver-bundle:jar:1.35.1:compile" ; 
+	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+ } 

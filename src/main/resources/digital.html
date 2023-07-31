@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Statement</title>
+  <link rel="icon" href="#" />
+  <link href="../styles/tahoma.min.css" rel="stylesheet" />
+  <style type="text/css">
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    :root {
+      --page-fill-header-height: 72px;
+      --header-height: 38px;
+      --footer-height: 32px;
+    }
+
+    body .app {
+      color: #000;
+      font-size: 12px;
+      background: #ffffff;
+      background-size: cover;
+      font-family: "Tahoma", sans-serif;
+      font-variant-numeric: tabular-nums;
+      -webkit-print-color-adjust: exact !important;
+    }
+
+    /* Common Css */
+    .wd-100 {
+      width: 100%;
+    }
+
+    .w-50 {
+      width: 50px;
+    }
+
+    .w-60 {
+      width: 60px;
+    }
+
+    .w-77 {
+      width: 77px;
+    }
+
+    .w-80 {
+      width: 80px;
+    }
+
+    .w-115 {
+      width: 115px;
+    }
+
+    .w-120 {
+      width: 120px;
+    }
+
+    .w-200 {
+      width: 200px;
+    }
+
+    .w-380 {
+      width: 380px;
+    }
+
+    .w-400 {
+      width: 400px;
+    }
+
+    .h-11 {
+      height: 11px;
+    }
+
+    .mh-75 {
+      min-height: 75px;
+    }
+
+    .mw-58 {
+      min-width: 58px;
+    }
+
+    .mw-230 {
+      min-width: 230px;
+    }
+
+    .mw-270 {
+      min-width: 270px;
+    }
+
+    .mw-280 {
+      min-width: 280px;
+    }
+
+    .f-size-6 {
+      font-size: 6px;
+    }
+
+    .f-size-10 {
+      font-size: 10px;
+    }
+
+    .f-size-11 {
+      font-size: 11px;
+    }
+
+    .f-size-12 {
+      font-size: 12px;
+    }
+
+    .f-size-13 {
+      font-size: 13px;
+    }
+
+    .f-size-14 {
+      font-size: 14px;
+    }
+
+    .lh-16 {
+      line-height: 16px;
+    }
+
+    .mt-10 {
+      margin-top: 10px;
+    }
+
+    .mt-20 {
+      margin-top: 20px;
+    }
+
+    .mt-24 {
+      margin-top: 24px;
+    }
+
+    .mr-50 {
+      margin-right: 50px;
+    }
+
+    .mb-5 {
+      margin-bottom: 5px;
+    }
+
+    .mb-10 {
+      margin-bottom: 10px;
+    }
+
+    .mb-15 {
+      margin-bottom: 15px;
+    }
+
+    .mb-24 {
+      margin-bottom: 24px;
+    }
+
+    .mb-27 {
+      margin-bottom: 27px;
+    }
+
+    .mb-30 {
+      margin-bottom: 30px;
+    }
+
+    .mb-50 {
+      margin-bottom: 50px;
+    }
+
+    .ml-20 {
+      margin-left: 20px;
+    }
+
+    .ml-50 {
+      margin-left: 50px;
+    }
+
+    .p-4 {
+      padding: 4px;
+    }
+
+    .pt-5 {
+      padding-top: 5px;
+    }
+
+    .pt-10 {
+      padding-top: 10px;
+    }
+
+    .pt-20 {
+      padding-top: 20px;
+    }
+
+    .pr-15 {
+      padding-right: 15px;
+    }
+
+    .pr-20 {
+      padding-right: 20px;
+    }
+
+    .pr-48 {
+      padding-right: 48px;
+    }
+
+    .pr-72 {
+      padding-right: 72px;
+    }
+
+    .pb-5 {
+      padding-bottom: 5px;
+    }
+
+    .pb-10 {
+      padding-bottom: 10px;
+    }
+
+    .pb-30 {
+      padding-bottom: 30px;
+    }
+
+    .pb-90 {
+      padding-bottom: 90px;
+    }
+
+    .pl-4 {
+      padding-left: 4px;
+    }
+
+    .pl-6 {
+      padding-left: 6px;
+    }
+
+    .pl-10 {
+      padding-left: 10px;
+    }
+
+    .pl-20 {
+      padding-left: 20px;
+    }
+
+    .pl-29 {
+      padding-left: 29px;
+    }
+
+    .pl-30 {
+      padding-left: 30px;
+    }
+
+    .pl-40 {
+      padding-left: 40px;
+    }
+
+    .pl-50 {
+      padding-left: 50px;
+    }
+
+    .pl-59 {
+      padding-left: 59px;
+    }
+
+    .pl-78 {
+      padding-left: 78px;
+    }
+
+    .b-black {
+      border: 1px solid #000;
+    }
+
+    .b-top-white {
+      border-top: 1px solid white;
+    }
+
+    .b-top-black {
+      border-top: 1px solid #000;
+    }
+
+    .b-left-black {
+      border-left: 1px solid #000;
+    }
+
+    .b-right-black {
+      border-right: 1px solid #000;
+    }
+
+    .b-bottom-black {
+      border-bottom: 1px solid #000;
+    }
+
+    .bt-0 {
+      border-top: 0px;
+    }
+
+    .b-collapse {
+      border-collapse: collapse;
+    }
+
+    .black {
+      color: black;
+    }
+
+    .white {
+      color: white;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .blue {
+      color: #339aff;
+    }
+
+    .bg-blue {
+      background-color: #339aff;
+    }
+
+    .bg-white {
+      background-color: #d9d9d9;
+    }
+
+    .bg-grey {
+      background-color: #dddada;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .f-weight-50 {
+      font-weight: 50;
+    }
+
+    .align-left {
+      text-align: left;
+    }
+
+    .align-center {
+      text-align: center;
+    }
+
+    .align-right {
+      text-align: right;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    .d-flex-wrap {
+      flex-wrap: wrap;
+    }
+
+    .d-flex-basis-50 {
+      flex-basis: 50%;
+    }
+
+    .d-space-between {
+      justify-content: space-between;
+    }
+
+    .d-space-around {
+      justify-content: space-around;
+    }
+
+    .b-spacing-0 {
+      border-spacing: 0px;
+    }
+
+    .d-block {
+      display: block;
+    }
+
+    .fw-normal {
+      font-weight: normal;
+    }
+
+    /* Page Break Css */
+    .page-break-after-always {
+      page-break-after: always;
+    }
+
+    .page-break-after-avoid {
+      page-break-after: avoid;
+    }
+
+    .page-break-before-always {
+      page-break-before: always;
+    }
+
+    .page-break-before-avoid {
+      page-break-before: avoid;
+    }
+
+    .page-break-inside-always {
+      page-break-inside: always;
+    }
+
+    .page-break-inside-avoid {
+      page-break-inside: avoid;
+    }
+
+    /* Statement Header CSS */
+    .header-container {
+      z-index: -1;
+      position: fixed;
+      height: var(--header-height);
+      background-color: white;
+    }
+
+    .page-fill-header {
+      position: relative;
+      margin-top: calc(var(--page-fill-header-height, 0px) * -1);
+    }
+
+    .page-header-filler {
+      height: calc(var(--header-height, 0px) + 0px);
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+
+    /* Footer Css */
+    .footer-container {
+      height: var(--footer-height);
+      background-color: white;
+    }
+
+    /* Header Css */
+    .header-container-root {
+      z-index: 5;
+      position: relative;
+      padding-right: 48px;
+      padding-left: 57.6px;
+    }
+
+    .statement-header-container {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 48px;
+    }
+
+    .statement-header-container .contact-info-wrapper {
+      padding-top: 40px;
+      text-align: right;
+    }
+
+    /* Page Header Css */
+    .page-header-root {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    /* Section Header */
+    .section-header {
+      background-color: #339aff;
+      font-size: 14px;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+      padding: 2px 4px;
+    }
+
+    /* Line Text Css */
+    .line-text-root {
+      font-size: 13px;
+      line-height: 15.5px;
+    }
+
+    /* Line Item */
+    .line-item-root {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .line-item-css {
+      padding: 2px 4px;
+    }
+
+    /* Summary Css */
+    .summary-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .summary-left-wrapper {
+      width: 298px;
+    }
+
+    .summary-right-wrapper {
+      width: 360px;
+    }
+
+    /* Account Summary Css */
+    .account-summary-root {
+      width: 298px;
+      margin-bottom: 15px;
+    }
+
+    .account-summary-root .empty-line {
+      min-height: 25px;
+    }
+
+    /* Account Notifications Css */
+    .account-notifications-root {
+      margin-left: 78.8px;
+      margin-right: 98px;
+    }
+
+    /* Account Summary Table Css */
+    .account-summary-table-root {
+      padding-left: 38.4px;
+      padding-right: 38.4px;
+    }
+
+    .account-summary-table-root th {
+      padding: 2px;
+    }
+
+    .account-summary-table-root td {
+      padding: 2px;
+    }
+
+    .account-summary-table-root .ast-title {
+      padding-left: 6px;
+    }
+
+    .account-summary-table-root .ast-no-data th {
+      padding: 0px;
+      padding-left: 6px;
+    }
+
+    #totalTransactionRow {
+      padding-bottom: 11px;
+    }
+
+    /* Rewards Summary Css */
+    .reward-summary-root .rs-disclaimer-text p {
+      font-size: 11px;
+      text-align: left;
+      line-height: 13.5px;
+    }
+
+    /* Minimum Payment Css */
+    .minimum-payment-root .mp-wrapper {
+      border: 1px solid #000;
+      border-spacing: 0px;
+    }
+
+    .minimum-payment-root .mp-wrapper th {
+      font-weight: normal;
+      color: #000;
+      padding: 2px 4px;
+    }
+
+    .minimum-payment-root .mp-wrapper td {
+      font-weight: normal;
+      color: #000;
+      padding: 2px 4px;
+    }
+
+    /* Mail Address Info Css */
+    .mail-address-info-root {
+      padding-left: 29px;
+      padding-right: 48px;
+    }
+
+    .mail-address-info-root td {
+      padding: 1px;
+    }
+
+    .mail-address-info-root .amount-box {
+      padding: 5px 70px 5px 5px;
+    }
+
+    .mail-address-info-root .footer-id {
+      font-family: 'OCR A Extended', sans-serif;
+    }
+
+    .mail-address-info-root .right-side-wrapper {
+      flex-basis: 40%;
+    }
+
+    /* Important Info Css */
+
+    .imp-info-root .heading {
+      font-size: 12px;
+    }
+
+    .imp-info-root p {
+      font-size: 9px;
+    }
+
+    @page { size:8.5in 11in; margin: 0; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <table class="page-fill-header" aria-describedby="statementHeader">
+      <thead>
+        <th id="statementHeader">
+          <tr>
+            <td class="page-header-filler">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="header-container"></div>
+            </td>
+          </tr>
+        </th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <!-- Statement Header -->
+            <div class="header-container-root"></div>
+            <!-- Statement User Info -->
+            <div class="user-info-root mt-10 mb-10 pr-48 pl-59">
+              <div class="ui-name"></div>
+              <div class="ui-member"></div>
+              <div class="ui-billing-period"></div>
+            </div>
+
+            <div class="summary-wrapper mb-10 pr-48 pl-59">
+              <div class="summary-left-wrapper">
+                <!-- Account Summary Info -->
+                <div class="account-summary-root">
+                  <div class="as-section-header"></div>
+                  <div class="b-black bt-0">
+                    <div class="as-pb"></div>
+                    <div class="as-paoc"></div>
+                    <div class="as-ts"></div>
+                    <div class="as-ca"></div>
+                    <div class="as-fc"></div>
+                    <div class="as-ic"></div>
+                  </div>
+                  <div class="b-black bt-0">
+                    <div class="as-nb"></div>
+                    <p class="empty-line"></p>
+                    <div class="as-cl"></div>
+                    <div class="as-ac"></div>
+                    <div class="as-cacl"></div>
+                    <div class="as-afc"></div>
+                    <div class="as-dibc"></div>
+                  </div>
+                </div>
+
+                <!-- Reward Summary Info -->
+                <div class="reward-summary-root">
+                  <div class="rs-section-header"></div>
+                  <div class="b-black bt-0">
+                    <div class="rs-retp"></div>
+                  </div>
+                  <div class="b-black bt-0">
+                    <div class="rs-reytd"></div>
+                    <div class="rs-disclaimer-text"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="summary-right-wrapper">
+                <!-- Payment Summary Info -->
+                <div class="payment-summary-root mb-24">
+                  <div class="ps-section-header"></div>
+                  <div class="b-black bt-0">
+                    <div class="ps-nb"></div>
+                    <div class="ps-mp-current"></div>
+                    <div class="ps-mp-past"></div>
+                    <div class="ps-tmpd"></div>
+                    <div class="ps-pdd"></div>
+                    <div class="ps-late-payment-disclaimer"></div>
+                  </div>
+                </div>
+
+                <!-- Minimum Payment Warning -->
+                <div class="minimum-payment-root"></div>
+              </div>
+            </div>
+
+            <!-- Account Notifications -->
+            <div class="account-notifications-root"></div>
+
+            <!-- Mail Address Info -->
+            <div class="mail-address-info-root page-break-after-always"></div>
+
+            <!-- Account Summary Table -->
+            <div id="account-summary-table" class="account-summary-table-root f-size-11 page-break-after-always">
+              <div class="ast-heading"></div>
+              <table class="wd-100 b-collapse b-spacing-0" aria-describedby="accountSummaryInfoTable">
+                <thead class="ast-header">
+                  <th id="astHeader"></th>
+                </thead>
+
+                <!-- No data -->
+                <tbody class="ast-no-data"></tbody>
+
+                <!-- Payment and other credits table -->
+                <tbody class="ast-paoc"></tbody>
+
+                <!-- Transactions table -->
+                <tbody class="ast-t"></tbody>
+
+                <!-- Cash Advances table -->
+                <tbody class="ast-ca"></tbody>
+
+                <!-- Fees table -->
+                <tbody class="ast-f"></tbody>
+
+                <!-- Interest Charged table -->
+                <tbody class="ast-ic"></tbody>
+
+                <tfoot>
+                  <tr>
+                    <td>
+                      <!-- Statement Footer -->
+                      <div class="footer-container"></div>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+
+            <!-- Year To Date Info -->
+            <div class="year-to-date-root page-break-inside-avoid mb-27 pl-78 pr-72"></div>
+
+            <!-- Interest Charge Calculation -->
+            <div class="interest-charge-calculation-root page-break-after-always page-break-inside-avoid pl-78 pr-72">
+            </div>
+
+            <!-- Important Info -->
+            <div class="imp-info-root pl-78 pr-72"></div>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>
+            <!-- Statement Footer -->
+            <div class="footer-container"></div>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <script>
+    const constants = {
+      currencyMap: {
+        INR: "en-IN",
+        USD: "en-US",
+        BRL: "pt-BR",
+        PHP: "en-PH",
+        VND: "vi-VN",
+        EUR: "en-UK",
+        JPY: "ja-JP",
+        CNY: "zh-CN",
+        CAD: "en-CA",
+        SGD: "zn-SG",
+        AED: "en-AE",
+        HKD: "zn-HK",
+        AUD: "en-AU",
+      },
+      balanceTypeMappings: {
+        PURCHASES: "Purchases",
+        CASH_ADVANCES: "Cash Advances"
+      },
+      labels: {
+        // Statement Header Labels
+        webUrl: "www.sparrowcard.com",
+        customerSupport: "Customer Service 1-800-839-9797",
+        addressLineA: "113 Cherry St. #87446",
+        addressLineB: "Seattle, WA 98104",
+        memberSinceLabel: "Member Since ",
+        billingPeriodLabel: "Billing Period: ",
+
+        // Statement Account Summary Labels
+        accountSummaryLabel: "ACCOUNT SUMMARY",
+        previousBalanceLabel: "Previous Balance",
+        paymentsAndOtherCreditsLabel: "Payments and Other Credits",
+        transactionsLabel: "Transactions",
+        cashAdvancesLabel: "Cash Advances",
+        feesChargedLabel: "Fees Charged",
+        interestChargedLabel: "Interest Charged",
+
+        newBalanceLabel: "New Balance",
+        creditLimitLabel: "Credit Limit",
+        availableCreditLabel: "Available Credit",
+        cashAdvanceCreditLimitLabel: "Cash Advance Credit Limit",
+        availableForCashLabel: "Available for Cash",
+        daysInBillingCycleLabel: "Days in Billing Cycle",
+
+        // Reward Summary Labels
+        rewardsSummaryLabel: "REWARDS SUMMARY",
+        rewardsEarnedThisPeriodLabel: "Rewards Earned this Period",
+        rewardsEarnedYearToDateLabel: "Rewards Earned Year-<br>to-Date",
+        rewardsSummaryDisclaimerLabel: "You earn 1% cashback on every on-time payment. Cashback is automatically credited to your account each month. See your Cardholder Agreement for details.",
+
+        // Payment Information Labels
+        paymentInformationLabel: "PAYMENT INFORMATION",
+        minPaymentCurrentLabel: "Minimum Payment Due (Current)",
+        minPaymentPastLabel: "Minimum Payment Due (Past)",
+        totalMinimumPaymentDueLabel: "Total Minimum Payment Due",
+        paymentDueDateLabel: "Payment Due Date",
+        latePaymentWarningLabel: "LATE PAYMENT WARNING:",
+        latePaymentDisclaimerText: "If we do not receive your minimum payment by your due date, you may have to pay a late fee of up to ",
+
+        // Minimum Payment Warning Labels
+        minimumPaymentWarningLabel: "MINIMUM PAYMENT WARNING: ",
+        minimumPaymentDisclaimerText: "If you make only the Minimum Payment each period, you will pay more in interest and it will take you longer to pay off your balance. For example:",
+        minimumPaymentColA: "If you make no<br> additional charges and<br> each month you pay…",
+        minimumPaymentColB: "You will pay off the <br>balance shown on this<br> statement in about…",
+        minimumPaymentColC: "And you will end up<br> paying an estimated <br>total of…",
+        onlyTheMinimumPaymentLabel: "Only the Minimum<br> Payment",
+        yearsLabel: "years",
+        monthsLabel: "months",
+        creditCounselingLabel: "For information about credit counseling, call 1-800-716-1399",
+        savingsLabel: "Savings",
+
+        // Account Notifications Labels
+        accountNotificationsLabel: "ACCOUNT NOTIFICATIONS",
+
+        // Mail Portion Labels
+        mailThisPortionLabel: "Mail this portion of the statement along with your check payable to: Sparrow",
+        cardEndingInLabel: "CARD ENDING IN ",
+        minimumPaymentDueLabel: "Minimum Payment Due",
+        paymentDueDateLabel: "Payment Due Date",
+        amountEnclosedLabel: "Amount Enclosed",
+        dollar: "$",
+        updateInfoLabel: "Address, email or phone number changed? Update on our mobile app, it’s fast and easy!",
+        moreWaysToPayLabel: "More ways to pay!",
+        sparrowAppLabel: "Sparrow <br>App",
+        customerServiceLabel: "Customer Service <br> 1-800-839-9797",
+        sparrowAddressLine1: "SPARROW",
+        sparrowAddressLine2: "PO BOX 4153",
+        sparrowAddressLine3: "WOBURN, MA 01888-4153",
+
+        // Account Summary Table Labels
+        transactionDateLabel: "Transaction Date",
+        postingDateLabel: "Posting Date",
+        descriptionLabel: "Description",
+        refNumberLabel: "Reference Number",
+        amountLabel: "Amount",
+
+        paymentsAndOtherCreditsLabel: "Payments and Other Credits",
+        totalPaymentsLabel: "Total Payments and Other Credits for this period",
+
+        transactionsLabel: "Transactions",
+        totalTransactionsLabel: "Total Transactions for this period",
+
+        cashAdvancesLabel: "Cash Advances",
+        totalCashLabel: "Total Cash Advances for this period",
+
+        feesLabel: "Fees",
+        totalFeesLabel: "Total Fees for this period",
+
+        interestChargedHeading: "Interest Charged",
+        totalPeriodInterestLabel: "Total Interest charged for this period",
+
+        // Year to Date Labels
+        ytdLabel: "TOTALS YEAR-TO-DATE",
+        totalFeesChargedLabel: "Total fees charged in ",
+        totalInterestChargedLabel: "Total interest charged in ",
+
+        // Interest Charged Labels
+        interestCalculationLabel: "INTEREST CHARGE CALCULATION",
+        annualPercentageRateLabel: "Your Annual Percentage Rate (APR) is the annual interest rate on your account.",
+        balanceTypeLabel: "Type of Balance",
+        annualPercentRateLabel: "Annual Percent Rate (APR)",
+        balanceSubjectLabel: "Balance Subject to Interest Rate",
+        interestChargedLabel: "Interest Charged",
+        aprVaryLabel: "APRs followed by (v) may vary.",
+        varyLabel: "% (v)",
+
+        // Important Info Labels
+        importantInfoLabel: "IMPORTANT INFORMATION"
+      }
+    };
+
+    function calculateDaysInBillingCycle(startTime, endTime, locale) {
+      const startDayTime = new Date(getLocaleDateString(startTime, locale));
+      const endDayTime = new Date(getLocaleDateString(endTime, locale));
+
+      const day = 24 * 60 * 60 * 1000;
+
+      return Math.floor(((endDayTime - startDayTime) / day)) + 1;
+    };
+
+    function getLocaleCurrencyString(
+      number,
+      locale = "en-US",
+      currency
+    ) {
+      let num = number || 0;
+      if (isNaN(num)) {
+        num = 0;
+      }
+      num = num / 100;
+      if (!currency) {
+        return num.toLocaleString(locale, {
+          maximumFractionDigits: 2,
+        });
+      }
+      return num.toLocaleString(locale, {
+        maximumFractionDigits: 2,
+        style: "currency",
+        currency: currency,
+      });
+    };
+
+    // get locale date using native javascript
+    function getLocaleDateString(
+      date,
+      locale = "en-US",
+      options = { year: "numeric", month: "short", day: "numeric" }
+    ) {
+      const {
+        timezone
+      } = window.data || {};
+
+      let validDate = date;
+      if (typeof date === "string" && !isNaN(+date)) {
+        date = +date;
+      }
+      if (
+        validDate &&
+        (typeof date === "number" || typeof date === "string")
+      ) {
+        validDate = new Date(date);
+      }
+      if (Object.prototype.toString.call(validDate) === "[object Date]") {
+        if (isNaN(validDate)) {
+          return "";
+        }
+        const opt = { ...options, timeZone: timezone || "America/Los_Angeles" };
+        validDate = validDate.toLocaleDateString(locale, opt);
+        return /-/.test(validDate) ? validDate.replace(/-/g, " ") : validDate;
+      }
+      return "";
+    }
+
+    // Attach function
+    function attach(selector, html) {
+      document.querySelector(selector).innerHTML = html;
+    }
+
+    // Header Component
+    function renderHeader() {
+      const {
+        labels: { webUrl, customerSupport, addressLineA, addressLineB },
+      } = constants;
+
+      const {
+        paymentInstrument: { maskedPan = "" } = {},
+      } = window.data || {};
+
+      attach(".header-container-root", `
+        <div class="statement-header-container">
+          <div class="logo-wrapper">
+            <a href="#"> <img width="150" src="../images/sparrow-logo.svg" alt="logo"></a>
+            <p><b>Sparrow Rewards Mastercard - ending: ${maskedPan?.substr(-4) || ""}</b></p>
+          </div>
+          <div class="contact-info-wrapper">
+            <p><strong>${webUrl}</strong></p>
+            <p> <strong>${customerSupport}</strong></p>
+            <p><strong>${addressLineA}</strong></p>
+            <p><strong>${addressLineB}</strong></p>
+          </div>
+        </div>
+      `);
+    };
+    renderHeader();
+
+    // Get Page Header
+    function renderPageHeader() {
+      const {
+        labels: { cardEndingInLabel },
+        currencyMap
+      } = constants;
+
+      const {
+        startTime,
+        endTime,
+        summary: { currency } = {}
+      } = window.data || {};
+
+      const {
+        paymentInstrument: { maskedPan = "" } = {},
+      } = window.data || {};
+
+      const locale = currencyMap[currency];
+      attach('.page-fill-header .page-header-filler',
+        `<div class="mt-24 mb-10 d-flex d-space-around page-header-root">
+          <p class="f-size-11">${cardEndingInLabel} ${maskedPan?.substr(-4) || ""}</p>
+          <p class="f-size-11">
+            ${getLocaleDateString(startTime, locale, { year: "numeric", month: "2-digit", day: "2-digit" })} - 
+            ${getLocaleDateString(endTime, locale, { year: "numeric", month: "2-digit", day: "2-digit" })}
+          </p>
+          <p class="mw-58 f-size-11"></p>
+        </div>`
+      );
+    };
+    renderPageHeader();
+
+
+    // Render User Info
+    function renderUserInfo() {
+      const {
+        labels: { memberSinceLabel, billingPeriodLabel },
+        currencyMap
+      } = constants;
+
+      const {
+        startTime,
+        endTime,
+        accountHolder: {
+          firstName = "",
+          middleName = "",
+          lastName = "",
+          memberShipDate = ""
+        } = {},
+        summary: { currency } = {}
+      } = window.data || {};
+
+      const locale = currencyMap[currency];
+
+      const memberSince = getLocaleDateString(memberShipDate, locale, { year: "numeric" });
+      const billingStartDate = getLocaleDateString(startTime, locale, { month: "long", day: "2-digit", year: "numeric" });
+      const billingEndDate = getLocaleDateString(endTime, locale, { month: "long", day: "2-digit", year: "numeric" });
+
+      attach(`.ui-name`, getLineText(`${firstName || ""} ${middleName || ""} ${lastName || ""}`));
+      attach(`.ui-member`, getLineText(`${memberSinceLabel} ${memberSince}`));
+      attach(`.ui-billing-period`, getLineText(`${billingPeriodLabel} ${billingStartDate} - ${billingEndDate}`));
+    }
+    renderUserInfo();
+
+    // Account Summary
+    function renderAccountSummary() {
+      const {
+        labels: {
+          accountSummaryLabel,
+          previousBalanceLabel,
+          paymentsAndOtherCreditsLabel,
+          transactionsLabel,
+          cashAdvancesLabel,
+          feesChargedLabel,
+          interestChargedLabel,
+          newBalanceLabel,
+          creditLimitLabel,
+          availableCreditLabel,
+          cashAdvanceCreditLimitLabel,
+          availableForCashLabel,
+          daysInBillingCycleLabel
+        },
+        currencyMap
+      } = constants;
+
+      const {
+        startTime,
+        endTime,
+        summary: {
+          currency,
+          transactions: {
+            openingBalance = "",
+            credits = "",
+            transactionsTotal = "",
+            cashAdvances = "",
+            feeCharged = "",
+            interestCharged = ""
+          } = {},
+          dues: {
+            totalAmountDue = ""
+          } = {},
+          limits: {
+            totalCredit = "",
+            availableCredit = "",
+            cashAdvances: cashAdvanceLimit = "",
+            availableCash = ""
+          } = {}
+        } = {},
+      } = window.data || {};
+
+      const locale = currencyMap[currency];
+
+      const daysInBillingCycle = calculateDaysInBillingCycle(startTime, endTime, locale);
+
+      attach(`.account-summary-root .as-section-header`, getSectionHeader(accountSummaryLabel, 'b-black'));
+      attach(`.account-summary-root .as-pb`, getLineItem(previousBalanceLabel, getLocaleCurrencyString(
+        openingBalance,
+        locale,
+        currency
+      ), "line-item-css"));
+      attach(`.account-summary-root .as-paoc`, getLineItem(paymentsAndOtherCreditsLabel,
+        `(${getLocaleCurrencyString(
+          credits,
+          locale,
+          currency
+        )})`,
+        "line-item-css", "", "red"));
+      attach(`.account-summary-root .as-ts`, getLineItem(transactionsLabel, getLocaleCurrencyString(
+        transactionsTotal,
+        locale,
+        currency
+      ), "line-item-css"));
+      attach(`.account-summary-root .as-ca`, getLineItem(cashAdvancesLabel, getLocaleCurrencyString(
+        cashAdvances,
+        locale,
+        currency
+      ), "line-item-css"));
+      attach(`.account-summary-root .as-fc`, getLineItem(feesChargedLabel, getLocaleCurrencyString(
+        feeCharged,
+        locale,
+        currency
+      ), "line-item-css"));
+      attach(`.account-summary-root .as-ic`, getLineItem(interestChargedLabel, getLocaleCurrencyString(
+        interestCharged,
+        locale,
+        currency
+      ), "line-item-css"));
+
+      attach(`.account-summary-root .as-nb`, getLineItem(newBalanceLabel, getLocaleCurrencyString(
+        totalAmountDue,
+        locale,
+        currency
+      ), "line-item-css bold"));
+      attach(`.account-summary-root .as-cl`, getLineItem(creditLimitLabel, getLocaleCurrencyString(
+        totalCredit,
+        locale,
+        currency
+      ), "line-item-css"));
+      attach(`.account-summary-root .as-ac`, getLineItem(availableCreditLabel, getLocaleCurrencyString(
+        availableCredit,
+        locale,
+        currency
+      ), "line-item-css"));
+      attach(`.account-summary-root .as-cacl`, getLineItem(cashAdvanceCreditLimitLabel, getLocaleCurrencyString(
+        cashAdvanceLimit,
+        locale,
+        currency
+      ), "line-item-css"));
+      attach(`.account-summary-root .as-afc`, getLineItem(availableForCashLabel, getLocaleCurrencyString(
+        availableCash,
+        locale,
+        currency
+      ), "line-item-css"));
+      attach(`.account-summary-root .as-dibc`, getLineItem(daysInBillingCycleLabel, daysInBillingCycle <= 31 ? daysInBillingCycle : '', "line-item-css"));
+    };
+    renderAccountSummary();
+
+    // Reward Summary
+    function renderRewardSummary() {
+      const {
+        labels: {
+          rewardsSummaryLabel,
+          rewardsEarnedThisPeriodLabel,
+          rewardsEarnedYearToDateLabel,
+          rewardsSummaryDisclaimerLabel
+        },
+        currencyMap
+      } = constants;
+
+      const {
+        summary: {
+          currency,
+          rewards: {
+            earned = "",
+            rewardYTD = "",
+          } = {},
+        } = {},
+      } = window.data || {};
+
+      const locale = currencyMap[currency];
+
+      attach(`.reward-summary-root .rs-section-header`, getSectionHeader(rewardsSummaryLabel, 'b-black'));
+      attach(`.reward-summary-root .rs-retp`, getLineItem(rewardsEarnedThisPeriodLabel, getLocaleCurrencyString(
+        earned,
+        locale,
+        currency
+      ), "line-item-css"));
+      attach(`.reward-summary-root .rs-reytd`, getLineItem(rewardsEarnedYearToDateLabel, getLocaleCurrencyString(
+        rewardYTD,
+        locale,
+        currency
+      ), "line-item-css bold"));
+      attach(`.reward-summary-root .rs-disclaimer-text`, getLineText(rewardsSummaryDisclaimerLabel, "line-item-css"));
+    };
+    renderRewardSummary();
+
+    // Payment Information Summary
+    function renderPaymentInformation() {
+      const {
+        labels: {
+          paymentInformationLabel,
+          newBalanceLabel,
+          minPaymentCurrentLabel,
+          minPaymentPastLabel,
+          totalMinimumPaymentDueLabel,
+          paymentDueDateLabel,
+          latePaymentWarningLabel,
+          latePaymentDisclaimerText
+        },
+        currencyMap
+      } = constants;
+
+      const {
+        summary: {
+          currency,
+          dues: {
+            dueDate,
+            totalAmountDue,
+            minimumDueCurrent,
+            minimumDuePast,
+            minimumDue
+          } = {},
+        } = {},
+        paymentWarnings = []
+      } = window.data || {};
+
+      const locale = currencyMap[currency];
+      let lateFeeAmount = 0;
+
+      let lateFeeInfo = {};
+      if (paymentWarnings && paymentWarnings.length) {
+        lateFeeInfo = paymentWarnings.filter(obj => {
+          if (obj?.type === "LATE_FEE") {
+            return obj;
+          }
+        });
+        if (lateFeeInfo && lateFeeInfo.length) {
+          lateFeeInfo = lateFeeInfo[0];
+        }
+      };
+
+      if (lateFeeInfo?.warning && lateFeeInfo?.warning.length) {
+        lateFeeInfo.warning.forEach(obj => {
+          if (obj?.type === "LATE_FEE_WARNING") {
+            lateFeeAmount = obj?.value?.amount || 0;
+          }
+        });
+      }
+
+      attach(`.payment-summary-root .ps-section-header`, getSectionHeader(paymentInformationLabel, 'b-black'));
+      attach(`.payment-summary-root .ps-nb`, getLineItem(newBalanceLabel, getLocaleCurrencyString(
+        totalAmountDue,
+        locale,
+        currency
+      ), "line-item-css", "", "bold"));
+
+      // Minimum Payment Due and Current
+      if (lateFeeInfo?.showMinimumPaymentBifurcation) {
+        attach(`.payment-summary-root .ps-mp-current`, getLineItem(minPaymentCurrentLabel, getLocaleCurrencyString(
+          minimumDueCurrent,
+          locale,
+          currency
+        ), "line-item-css", "", "bold"));
+        attach(`.payment-summary-root .ps-mp-past`, getLineItem(minPaymentPastLabel, getLocaleCurrencyString(
+          minimumDuePast,
+          locale,
+          currency
+        ), "line-item-css", "", "bold"));
+      }
+
+      attach(`.payment-summary-root .ps-tmpd`, getLineItem(totalMinimumPaymentDueLabel, getLocaleCurrencyString(
+        minimumDue,
+        locale,
+        currency
+      ), "line-item-css", "", "bold"));
+      attach(
+        `.payment-summary-root .ps-pdd`,
+        getLineItem(paymentDueDateLabel, getLocaleDateString(
+          dueDate,
+          locale,
+          { month: "short", day: "2-digit", year: "numeric" }
+        ), "line-item-css", "", "bold"));
+      attach(`.payment-summary-root .ps-late-payment-disclaimer`, `
+        <div class='line-item-css align-left'>
+          <strong>${latePaymentWarningLabel}</strong>
+          <span>${latePaymentDisclaimerText}</span>
+          <strong>${getLocaleCurrencyString(lateFeeAmount, locale, currency)}</strong>
+        </div>
+      `);
+    };
+    renderPaymentInformation();
+
+    // Minimum Payment Info
+    function renderMinimumPaymentInfo() {
+      const {
+        labels: {
+          minimumPaymentWarningLabel,
+          minimumPaymentDisclaimerText,
+          minimumPaymentColA,
+          minimumPaymentColB,
+          minimumPaymentColC,
+          onlyTheMinimumPaymentLabel,
+          yearsLabel,
+          monthsLabel,
+          savingsLabel,
+          creditCounselingLabel,
+        },
+        currencyMap
+      } = constants;
+
+      const {
+        summary: {
+          currency
+        } = {},
+        paymentWarnings = []
+      } = window.data || {};
+
+      const locale = currencyMap[currency];
+
+      let minimumPaymentWarningInfo = {};
+      if (paymentWarnings && paymentWarnings.length) {
+        minimumPaymentWarningInfo = paymentWarnings.filter(obj => {
+          if (obj?.type === "MINIMUM_PAYMENT_WARNING") {
+            return obj;
+          }
+        });
+        if (minimumPaymentWarningInfo && minimumPaymentWarningInfo.length) {
+          minimumPaymentWarningInfo = minimumPaymentWarningInfo[0];
+        }
+      };
+
+      let onlyPaymentInfo = {};
+      let customPaymentInfo = {};
+      let showSecondRow = false;
+      if (minimumPaymentWarningInfo?.warning && minimumPaymentWarningInfo?.warning.length) {
+        minimumPaymentWarningInfo.warning.forEach(obj => {
+          if (obj?.type === "ONLY_PAYMENT_WARNING") {
+            onlyPaymentInfo = obj?.value || {};
+          }
+          if (obj?.type === "CUSTOM_PAYMENT_WARNING") {
+            showSecondRow = true;
+            customPaymentInfo = obj?.value || {};
+          }
+        });
+      }
+
+      attach('.minimum-payment-root', `
+        <table class="mp-wrapper mb-5">
+              <thead>
+                  <tr>
+                     <th colspan="3" class="b-bottom-black">
+                        <div class="align-left"><strong>${minimumPaymentWarningLabel}</strong>${minimumPaymentDisclaimerText}</div>
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="align-center f-size-11 bg-white b-right-black b-bottom-black">${minimumPaymentColA}</td>
+                     <td class="align-center f-size-11 bg-white b-right-black b-bottom-black">${minimumPaymentColB}</td>
+                     <td class="align-center f-size-11 bg-white b-bottom-black">${minimumPaymentColC}</td>
+                  </tr>
+                  <tr>
+                     <td class="align-center f-size-12 b-right-black">${onlyTheMinimumPaymentLabel}</td>
+                     <td class="align-center f-size-12 b-right-black">${onlyPaymentInfo?.months !== undefined ? `${onlyPaymentInfo?.months < 24 ? onlyPaymentInfo?.months : onlyPaymentInfo?.years} ${onlyPaymentInfo?.months < 24 ? monthsLabel : yearsLabel}` : ""}</td>
+                     <td class="align-center">${getLocaleCurrencyString(onlyPaymentInfo?.amount, locale, currency)}</td>
+                  </tr>
+                  ${showSecondRow ? `<tr>
+                    <td class="align-center f-size-12 b-right-black b-top-black">${getLocaleCurrencyString(customPaymentInfo?.additionalPayment, locale, currency)}</td>
+                    <td class="align-center f-size-12 b-right-black b-top-black">${customPaymentInfo?.years !== undefined ? `${customPaymentInfo?.years} ${yearsLabel}` : ""}</td>
+                    <td class="align-center b-top-black">${getLocaleCurrencyString(customPaymentInfo?.amount, locale, currency)}<br>${savingsLabel} (${getLocaleCurrencyString(customPaymentInfo?.savings, locale, currency)}) </td>
+                  </tr>`: ''}
+               </tbody>
+        </table>
+        <p class="align-left pl-10 f-size-11 w-400 bold">${creditCounselingLabel}</p>
+      `
+      );
+    };
+    renderMinimumPaymentInfo();
+
+    // Account Notifications
+    function renderAccountNotifications() {
+      const {
+        labels: {
+          accountNotificationsLabel,
+        },
+      } = constants;
+
+      const {
+        messages = []
+      } = window.data || {};
+
+      messages.sort((a, b) => a.priority - b.priority);
+      const notifications = messages.map(({ message }) => message);
+
+      attach(`.account-notifications-root`, `
+        <div class="mt-20 mb-30 mh-75">
+          <p class="align-center f-size-12"><strong>${accountNotificationsLabel}</strong></p>
+          <p class="align-center f-size-6"><br></p>
+          <p class="align-center f-size-12">${notifications.join(" <br/>")}</p>
+        </div>
+      `);
+    };
+    renderAccountNotifications();
+
+    // Mail Address Info
+    function renderMailAddressInfo() {
+      const {
+        labels: {
+          mailThisPortionLabel,
+          cardEndingInLabel,
+          newBalanceLabel,
+          minimumPaymentDueLabel,
+          paymentDueDateLabel,
+          amountEnclosedLabel,
+          dollar,
+          updateInfoLabel,
+          moreWaysToPayLabel,
+          sparrowAppLabel,
+          customerServiceLabel,
+          sparrowAddressLine1,
+          sparrowAddressLine2,
+          sparrowAddressLine3
+        },
+        currencyMap
+      } = constants;
+
+      const {
+        paymentInstrument: { maskedPan = "" } = {},
+        summary: {
+          currency,
+          accountNumber,
+          dues: {
+            dueDate,
+            totalAmountDue,
+            minimumDue
+          } = {},
+        } = {},
+        accountHolder: {
+          firstName = "",
+          middleName = "",
+          lastName = "",
+          address: { line1 = "", line2 = "", city = "", state = "", postalCode = "", country = "" } = {},
+        } = {},
+      } = window.data || {};
+
+      const locale = currencyMap[currency];
+
+      attach(`.mail-address-info-root`, `
+        <div class="mai-wrapper">        
+          <p class="align-center">${mailThisPortionLabel}</p><br>
+          <div class="d-flex d-space-between pl-20">
+            <div class="pb-10">
+              <table class="b-spacing-0 w-380">
+                  <thead>
+                    <tr>
+                      <th colspan="3" class="b-bottom-black">
+                        <p class="align-left pt-5 pb-5 f-size-12 blue bold"><strong>${cardEndingInLabel} ${maskedPan?.substr(- 4) || ""}</strong></p>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="2" class="align-left f-size-12">${newBalanceLabel}</td>
+                      <td class="align-right f-size-12"><b>${getLocaleCurrencyString(totalAmountDue, locale, currency)}</b></td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" class="align-left f-size-12">${minimumPaymentDueLabel}</td>
+                      <td class="align-right f-size-12"><b>${getLocaleCurrencyString(minimumDue, locale, currency)}</b></td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" class="align-left f-size-12">${paymentDueDateLabel}</td>
+                      <td class="align-right f-size-12"><b>${getLocaleDateString(dueDate, locale, { month: "short", day: "2-digit", year: "numeric" })}</b></td>
+                    </tr>
+                    <tr>
+                      <td colspan="4" class="h-11"></td>
+                    </tr>
+                    <tr>
+                      <th colspan="2" class="bg-blue">
+                        <p class="align-center p-4 white f-size-12 bold"><b>${amountEnclosedLabel}</b> </p>
+                      </th>
+                      <td class="align-left f-size-12 b-black amount-box">${dollar}</td>
+                    </tr>
+                  </tbody>
+              </table>
+              <div class="d-flex d-space-between mw-300">
+                  <div class="pl-4 pr-15 mw-280">
+                    <p class="f-size-13 pt-10 pb-10">  
+                      ${firstName || ""} ${middleName || ""} ${lastName || ""}<br>
+                      ${line1 ? `${line1}<br>` : ''}
+                      ${line2 ? `${line2}<br>` : ''}
+                      ${city ? `${city}, ` : ""} ${state || ""} ${postalCode}
+                    </p>
+                    <div class="f-size-10 w-200">${updateInfoLabel}</div>
+                  </div>
+                  <div>
+                    <div class="align-center pt-10 pb-10 w-120"><b>${moreWaysToPayLabel}</b></div>
+                    <div class="d-flex align-center">
+                      <div class="pr-15 w-50">
+                        <img src="../images/smart-phone.svg" width="28">
+                        <p class="f-size-10">${sparrowAppLabel}</p>
+                      </div>
+                      <div class="w-80">
+                        <img src="../images/call-icon.svg" width="28">
+                        <p class="f-size-10">${customerServiceLabel}</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="right-side-wrapper pl-10">
+              <a class="d-block pl-40 pt-20 pb-90" href="#">  <img width="130" src="../images/sparrow-logo.svg" alt="logo"></a>
+              <div class="f-size-13 pl-50">
+                <p>${sparrowAddressLine1}</p>
+                <p>${sparrowAddressLine2}</p>
+                <p>${sparrowAddressLine3}</p>
+              </div>
+            </div>
+          </div> 
+          <br>
+          <p class="footer-id f-size-14">${accountNumber}</p>
+        </div>
+      `);
+    };
+    renderMailAddressInfo();
+
+    // Account Summary Table Info
+    function renderAccountSummaryTableInfo() {
+      const {
+        labels: {
+          accountSummaryLabel,
+          transactionDateLabel,
+          postingDateLabel,
+          descriptionLabel,
+          refNumberLabel,
+          amountLabel,
+          paymentsAndOtherCreditsLabel,
+          totalPaymentsLabel,
+          transactionsLabel,
+          totalTransactionsLabel,
+          cashAdvancesLabel,
+          totalCashLabel,
+          feesLabel,
+          totalFeesLabel,
+          interestChargedHeading,
+          totalPeriodInterestLabel,
+        },
+        currencyMap
+      } = constants;
+
+      const {
+        paymentInstrument: { maskedPan = "" } = {},
+        summary: {
+          currency,
+          transactions: {
+            credits = "",
+            transactionsTotal = "",
+            cashAdvances = "",
+            feeCharged = "",
+            interestCharged = ""
+          } = {},
+          accountNumber,
+          dues: {
+            dueDate,
+            totalAmountDue,
+            minimumDue
+          } = {},
+        } = {},
+        accountHolder: {
+          firstName = "",
+          middleName = "",
+          lastName = "",
+          address: { line1 = "", line2 = "", city = "", state = "", postalCode = "", country = "" } = {},
+        } = {},
+        postings = []
+      } = window.data || {};
+
+      const locale = currencyMap[currency];
+
+      const paymentsList = [];
+      const transactionsList = [];
+      const cashAdvancesList = [];
+      const feesList = [];
+      const interestChargedList = [];
+
+      postings.forEach(({
+        date = '',
+        description = '',
+        postingDate = '',
+        transactionAmount: {
+          currency: postingCurrency = '',
+          value = ''
+        } = {},
+        referenceNumber = '',
+        postingCategory = ''
+      }) => {
+        const postingLocale = postingCurrency && currencyMap?.[postingCurrency] ? currencyMap[postingCurrency] : locale;
+        const postingData = {
+          date: getLocaleDateString(date, postingLocale, { month: "2-digit", day: "2-digit" }),
+          postingDate: getLocaleDateString(postingDate, postingLocale, { month: "2-digit", day: "2-digit" }),
+          description,
+          referenceNumber,
+          transactionAmount: getLocaleCurrencyString(
+            value,
+            postingLocale,
+            postingCurrency || currency
+          )
+        };
+        if (postingCategory === "PAYMENT_AND_OTHER_CREDITS") {
+          postingData.transactionAmount = `-${postingData.transactionAmount}`;
+          paymentsList.push(postingData);
+        }
+        if (postingCategory === "TRANSACTIONS") {
+          transactionsList.push(postingData);
+        }
+        if (postingCategory === "CASH_ADVANCES") {
+          cashAdvancesList.push(postingData);
+        }
+        if (postingCategory === "FEES") {
+          feesList.push(postingData);
+        }
+        if (postingCategory === "INTEREST_CHARGED") {
+          interestChargedList.push(postingData);
+        }
+      });
+
+      attach(`.account-summary-table-root .ast-heading`, `
+        <p class="bg-blue align-center white pt-5 pb-5 f-size-12"><b>${accountSummaryLabel}</b></p>
+      `);
+
+      attach(`.account-summary-table-root .ast-header`, `
+        <tr>
+          <th class="align-left w-115 b-bottom-black">${transactionDateLabel}</th>
+          <th class="align-left w-77 b-bottom-black">${postingDateLabel}</th>
+          <th class="align-center b-bottom-black">${descriptionLabel}</th>
+          <th class="align-left w-120 b-bottom-black">${refNumberLabel}</th>
+          <th class="align-right w-60 b-bottom-black">${amountLabel}</th>
+        </tr>
+      `);
+
+      // Rendering no data view
+      const totalTransactions = (paymentsList?.length || 0) + (transactionsList?.length || 0) + (cashAdvancesList?.length || 0) + (feesList?.length || 0) + (interestChargedList?.length || 0) 
+      if(totalTransactions === 0){
+        attach(`.account-summary-table-root .ast-no-data`, `
+          <tr>
+            <th colspan="5" class="align-left f-size-14 f-weight-50 b-top-black">
+              <br>No activity this period
+            </th>
+          </tr>
+        `);
+      }
+
+      // Rendering Payment and Other Credits Table
+      if (paymentsList && paymentsList.length) {
+        attach(`.account-summary-table-root .ast-paoc`, renderAccountSummarySubTable(
+          {
+            headerText: paymentsAndOtherCreditsLabel,
+            rows: paymentsList,
+            footerText: totalPaymentsLabel,
+            totalValue: `-${getLocaleCurrencyString(
+              credits,
+              locale,
+              currency
+            )}`
+          },
+        ));
+      }
+
+      // Rendering Transactions Table
+      if (transactionsList && transactionsList.length) {
+        attach(`.account-summary-table-root .ast-t`, renderAccountSummarySubTable(
+          {
+            headerText: transactionsLabel,
+            rows: transactionsList,
+            footerText: totalTransactionsLabel,
+            totalValue: getLocaleCurrencyString(
+              transactionsTotal,
+              locale,
+              currency
+            )
+          },
+        ));
+      }
+
+      // Rendering Cash Advances Table
+      if (cashAdvancesList && cashAdvancesList.length) {
+        attach(`.account-summary-table-root .ast-ca`, renderAccountSummarySubTable(
+          {
+            headerText: cashAdvancesLabel,
+            rows: cashAdvancesList,
+            footerText: totalCashLabel,
+            totalValue: getLocaleCurrencyString(
+              cashAdvances,
+              locale,
+              currency
+            )
+          },
+        ));
+      }
+
+      // Rendering Fees Table
+      if (feesList && feesList.length) {
+        attach(`.account-summary-table-root .ast-f`, renderAccountSummarySubTable(
+          {
+            headerText: feesLabel,
+            rows: feesList,
+            footerText: totalFeesLabel,
+            totalValue: getLocaleCurrencyString(
+              feeCharged,
+              locale,
+              currency
+            )
+          },
+        ));
+      }
+
+      // Rendering Interest Charged Table
+      if (interestChargedList && interestChargedList.length) {
+        attach(`.account-summary-table-root .ast-ic`, renderAccountSummarySubTable(
+          {
+            headerText: interestChargedHeading,
+            rows: interestChargedList,
+            footerText: totalPeriodInterestLabel,
+            totalValue: getLocaleCurrencyString(
+              interestCharged,
+              locale,
+              currency
+            )
+          },
+        ));
+      }
+    }
+    renderAccountSummaryTableInfo();
+
+    // Account Summary Sub Tables
+    function renderAccountSummarySubTable(tableInfo, headerClass) {
+      const {
+        headerText = '',
+        rows = [],
+        footerText = '',
+        totalValue = ''
+      } = tableInfo;
+      return `
+        <tr>
+          <th colspan="5" class="${headerClass} align-left bg-grey b-top-white ast-title">${headerText}</th>
+        </tr>
+        ${rows.map(
+        ({ date = '', postingDate = '', description = '', referenceNumber = '', transactionAmount = '' }) =>
+        (
+          `<tr>
+              <td class="align-center">${date}</td>
+              <td class="align-center">${postingDate}</td>
+              <td class="align-left">${description}</td>
+              <td class="align-center">${referenceNumber}</td>
+              <td class="align-right">${transactionAmount}</td>
+            </tr>`
+        )
+      ).join("")}
+        <tr>
+          <th colspan="4" class="align-left blue" id="totalTransactionRow">${footerText}</th>
+          <th class="align-right blue" id="totalTransactionRow">${totalValue}</th>
+        </tr>
+      `;
+    };
+
+    // Year To Date Info
+    function renderYearToDateInfo() {
+      const {
+        labels: {
+          ytdLabel,
+          totalFeesChargedLabel,
+          totalInterestChargedLabel
+        },
+        currencyMap,
+      } = constants;
+
+      const {
+        summary: {
+          ytdSummary: {
+            totalFees = '',
+            totalInterest = '',
+          } = {},
+          currency
+        } = {},
+        endTime
+      } = window.data || {};
+
+      const locale = currencyMap[currency];
+
+      const billingYear = getLocaleDateString(endTime, locale, { year: "numeric" });
+      attach('.year-to-date-root', `
+        <table class="b-black wd-100 b-spacing-0">
+          <thead>
+            <tr>
+              <th colspan="4" class="line-item-css fw-normal black bg-blue b-bottom-black">
+                <p class="align-center pt-5 pb-5 f-size-12 white bg-blue bold">${billingYear} ${ytdLabel}</p>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th colspan="3" class="align-left f-size-12 b-bottom-black line-item-css black fw-normal">${totalFeesChargedLabel} ${billingYear}</th>
+              <td class="align-right f-size-12 b-bottom-black line-item-css black fw-normal">${getLocaleCurrencyString(totalFees, locale, currency)}</td>
+            </tr>
+            <tr>
+              <th colspan="3" class="align-left f-size-12 line-item-css black fw-normal">${totalInterestChargedLabel} ${billingYear}</th>
+              <td class="align-right f-size-12 line-item-css black fw-normal">${getLocaleCurrencyString(totalInterest, locale, currency)}</td>
+            </tr>
+          </tbody>
+         </table>`
+      );
+    };
+    renderYearToDateInfo();
+
+    // Interest Charge Calculation
+    function renderInterestChargeCalculation() {
+      const {
+        labels: {
+          interestCalculationLabel,
+          annualPercentageRateLabel,
+          balanceTypeLabel,
+          annualPercentRateLabel,
+          balanceSubjectLabel,
+          interestChargedLabel,
+          aprVaryLabel,
+          varyLabel,
+        },
+        balanceTypeMappings,
+        currencyMap
+      } = constants;
+
+      const {
+        summary: {
+          currency,
+          interests = []
+        } = {},
+      } = window.data || {};
+
+      const locale = currencyMap[currency];
+
+      if (interests && interests.length) {
+        attach('.interest-charge-calculation-root', `
+          <table class="mt-10 b-black wd-100 b-spacing-0">
+            <thead>
+              <tr>
+                <th colspan="4" class="bg-blue b-bottom-black fw-normal black line-item-css">
+                  <p class="align-center pt-5 pb-5 f-size-12 white bg-blue bold">${interestCalculationLabel}</p>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="4" class="align-center f-size-12 b-bottom-black fw-normal black line-item-css">
+                  ${annualPercentageRateLabel}
+                </td>
+              </tr>
+              <tr>
+                <th class="align-center f-size-12 b-bottom-black fw-normal black line-item-css">
+                    <b>${balanceTypeLabel}</b>
+                </th>
+                <th class="align-center f-size-12 b-bottom-black fw-normal black line-item-css">
+                    <b>${annualPercentRateLabel}</b>
+                </th>
+                <th class="align-center f-size-12 b-bottom-black fw-normal black line-item-css">
+                    <b>${balanceSubjectLabel}</b>
+                </th>
+                <th class="align-center f-size-12 b-bottom-black fw-normal black line-item-css">
+                    <b>${interestChargedLabel}</b>
+                </th>
+              </tr>
+              ${interests.map(({ type = '', percentRate = '', balance = '', interestCharged = '' }) => (`<tr>
+                  <td class="align-left f-size-12 b-bottom-black fw-normal black line-item-css">
+                    ${balanceTypeMappings[type] ? balanceTypeMappings[type] : type}
+                  </td>
+                  <td class="align-center f-size-12 b-bottom-black fw-normal black line-item-css">
+                    ${percentRate}${varyLabel}
+                  </td>
+                  <td class="align-center f-size-12 b-bottom-black fw-normal black line-item-css">
+                      ${getLocaleCurrencyString(balance, locale, currency)}
+                  </td>
+                  <td class="align-center f-size-12 b-bottom-black fw-normal black line-item-css">
+                      ${getLocaleCurrencyString(interestCharged, locale, currency)}
+                  </td>
+                </tr>`)).join("")}
+              <tr>
+                <td colspan="4" class="align-left f-size-12 fw-normal black line-item-css">
+                  ${aprVaryLabel}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      `);
+      }
+    };
+    renderInterestChargeCalculation();
+
+    // Line Item
+    function getLineItem(label, value, className, labelClassName, valueClassName) {
+      return `<div class="line-item-root ${className}">
+        <p class="${labelClassName}">${label}</p>
+        <p class="${valueClassName}">${value}</p>
+      </div>`;
+    }
+
+    // Line Text
+    function getLineText(text, className) {
+      return `<p class="line-text-root ${className}">${text}</p>`;
+    }
+
+    // Section Header
+    function getSectionHeader(text, className) {
+      return `<p class="section-header ${className}">${text}</p>`;
+    }
+
+    // Render Important Info
+    function renderImportantInfo() {
+      const {
+        labels: {
+          importantInfoLabel
+        },
+      } = constants;
+
+      attach('.imp-info-root', `
+        <p class="bg-blue align-center bold white pt-5 pb-5 heading" > ${importantInfoLabel}</p>
+        <div class="d-flex d-space-between d-flex-wrap pt-10 pb-30">
+          <div class="pr-20 d-flex-basis-50">
+              <article>
+                <p><strong>How Can I Avoid Paying Interest Charges? </strong>If the entire amount you owe us is paid in full as of the statement closing date (the “New Balance”), we will not charge interest on any new transactions that post to the purchase balance. If you have been paying your Account in full without interest charges, but fail to pay your next New Balance in full, we will charge interest on the unpaid balance. For cash advances, we will start charging interest on the transaction date.</p>
+                <br>
+                  <p>
+                    <strong>How Do You Calculate The Interest Charge? </strong>
+                    We use a method called Average Daily Balance (including new transactions). Under this method, we first calculate your daily balance; for each transaction type (e.g., purchases and cash advances), 1) take the beginning balance and add in new transactions and the periodic interest charge on the previous day’s balance, then 2) subtract any payments and credits for the specific transaction types as of that day. The result is the daily balance for each transaction type. However, if you paid your previous month’s balance in full (or if your balance was zero or a credit amount), new transactions which post to your account are not added to the daily balances. Transactions made using the Card do not have a grace period.
+                    Next, to find your Average Daily Balance: 1) add the daily balances together for each transaction type, and 2) divide the sum by the number of days in the billing cycle.
+                    At the end of each billing cycle, we determine your interest charge as follows: 1) multiply your Average Daily Balance by the daily periodic rate (APR divided by 365) for that transaction type, and 2) multiply the result by the number of days in the billing cycle. NOTE: Due to rounding, this calculation may vary from the interest charge actually assessed.
+                  </p>
+                  <br>
+                    <p>
+                      <strong>Annual Fee.</strong>
+                      If your Account has an Annual Fee, it will be charged as according to the Cardholder Agreement. To avoid paying the fee, you must contact us at 1-800-839-9797 or give us written notice to close your Account, sent to the address for Customer Service shown on the first page of your statement. Your notice must reach us no later than 30-days from when your statement, on which the Annual Fee is imposed, is mailed or delivered. Closed accounts are subject to the Annual Fee as long as an outstanding balance remains on the Account.
+                    </p>
+                    <br>
+                      <p>
+                        <strong>Credit Reporting.</strong>
+                        We may report information about your Account to credit bureaus and others. Late payments, missed payments, or other defaults on our Account may be reflected in your credit report. Information we provide may appear on your credit reports. If you believe that we have reported inaccurate information about your Account to a credit bureau or other consumer reporting agency, notify us in writing at Sparrow, 113 Cherry St. #87446, Seattle, WA 98104. When you write, tell us the specific information that you believe is incorrect and why you believe it is incorrect.
+                      </p>
+                      <br>
+                        <p>
+                          <strong>Minimum Payment.</strong>
+                          You must pay us at least the minimum payment amount by the payment due date shown on your Statement. In addition to the minimum payment, you may pay all or part of the total balance on your Account.
+                        </p>
+                        <br>
+                          <p>
+                            <strong>Payment Processing.</strong>
+                            We may accept and process payments without losing any of our rights. When you send us an Item as payment, you authorize us to make a one-time electronic fund transfer from your deposit account. You also authorize us to process the payment as an Item. We may withdraw the funds from your deposit account as early as the same day we receive your payment. You will not receive your Item back from your bank. We will provide additional information about this process on your Statement. We may use the information from an Item to create an electronic image. We may collect and return the image electronically. This electronic image may also be converted to a substitute check and may be processed in the same way we would process an Item. We will not be responsible if an Item you provide has physical features that when imaged result in it not being processed as you intended.
+                          </p>
+                          <br>
+                            <p>
+                              <strong>Mail Payments.</strong>
+                              For payments made by mail, you must send the bottom portion of this statement and your check to the payment address on the front of this statement. If we receive your payment at our processing facility by 5 p.m. local time there, it will be credited as of that day. A payment received there after that time will be credited as of the next day. Allow 5 to 7 days for payments made by regular mail to reach us. Mailed payments received by us at any other location or payments in any other form may not be credited as of the day we receive them.
+                            </p>
+                            <br>
+                              <p>
+                                <strong>Payments Other Than By Mail.</strong>
+                                Payments made by phone or mobile app before Midnight Eastern Time will be credited as of that same day.
+                              </p>
+                            </article>
+                          </div>
+                          <div class="d-flex-basis-50 pl-20">
+                            <article>
+                              <p>
+                                <strong>Your Billing Rights</strong>
+                                This notice tells you about your rights and our responsibilities under the Fair Credit Billing Act.
+                              </p>
+                              <br>
+                                <p>
+                                  <strong>What To Do If You Find a Mistake on Your Statement: </strong>
+                                  If you think there is an error on your statement, write to us at:
+                                </p>
+                                <p class="align-center pt-10">Sparrow<br>
+                                  113 Cherry St. #87446<br>
+                                    Seattle, WA 98104
+                                  </p>
+                                  <p class="mt-10">You may also contact us at 1-800-839-9797, 24 hours a day / 7 days a week. In your letter, give us the following information: (1) account Information: your name and Account number; (2) dollar amount: the dollar amount of the suspected error; and (3) description of the problem: if you think there is an error on your bill, describe what you believe is wrong and why you believe it is a mistake. You must contact us within 60 days after the error appeared on your statement, and at least three (3) business days before an automated payment is scheduled, if you want to stop payment on the amount you think is wrong. You may notify us of any potential errors in writing or by calling us. You may still be required to pay the amount(s) in question if the Bank determines the transaction is not an error. If you believe fraud has occurred on your account, please call us as soon as possible at 1-800-839-9797.</p>
+                                  <br>
+                                    <p>
+                                      <strong>What Will Happen After We Receive Your Letter:</strong>
+                                      When we receive your letter, within 30 days of receiving your letter, we will tell you that we received your letter. We will also tell you if we have already corrected the error. While we investigate whether or not there has been an error, the following are true: (1) we cannot try to collect the amount in question or report you as delinquent on that amount. The charge in question may remain on your statement, and we may continue to charge you interest on that amount. But, if we determine that we made a mistake, you will not have to pay the amount in question or any interest or other fees related to that amount; (2) while you do not have to pay the amount in question until we send you a notice about the outcome of our investigation, you are responsible for the remainder of your balance; and (3) we can apply any unpaid amount against your Credit Limit. Within 90 days of receipt of your letter, we will send you a written notice explaining either that we corrected the error (to appear on your next Statement) or the reasons we believe the bill is correct. If we do not believe there was a mistake, you will have to pay the amount in question, along with applicable interest and fees. We will send you a Statement of the amount you owe and the date payment is due. We may then report you as delinquent if you do not pay the amount we think you owe. If you receive our explanation but still believe your bill is wrong, you must write to us within 10 days telling us that you still refuse to pay. If you do so, we cannot report you as delinquent without also reporting that you are questioning your bill. We must tell you the name of anyone to whom we reported you as delinquent, and we must let those organizations know when the matter has been settled between us. If we do not follow all of the rules above, you do not have to pay the first $50 of the amount you question, even if your bill is correct.
+                                    </p>
+                                    <br>
+                                      <p>
+                                        <strong>Your Rights If You Are Dissatisfied With Your Card Purchase:</strong>
+                                        If you are dissatisfied with the goods or services that you have purchased with your Card and you have tried in good faith to correct the problem with the merchant, you may have the right not to pay the remaining amount due on the purchase. To use this right, all of the following must be true: (1) The Purchase must have been made in your home state or within 100 miles of your current mailing address, and the Purchase price must have been more than $50. (Note: Neither of these are necessary if your Purchase was based on an advertisement we mailed to you, or if we own the company that sold you the goods or services.); (2) you must have used your Card for the purchase. Purchases made with Cash Advances from an ATM do not qualify or with a check that accesses your credit card account do not qualify; and (2) you must not yet have fully paid for the purchase. If all of the criteria above are met and you are still dissatisfied with the purchase, contact us in writing at:
+                                      </p>
+                                      <p class="align-center pt-10">
+                                        Sparrow<br>
+                                          113 Cherry St. #87446<br>Seattle, WA 98104
+                                            <br>
+                                              <br>
+                                                <p>While we investigate, the same rules apply to the disputed amount as discussed above. After we finish our investigation, we will tell you our decision. At that point, if we think you owe us an amount and you do not pay, we may report you as delinquent.</p>
+                                                <br>
+                                                  <p>
+                                                    <b>Sparrow Card issued by Evolve Bank & Trust, a member of the FDIC.</b>
+                                                  </p>
+                                                </article>
+                                              </div>
+                                            </div>
+      `);
+    };
+    renderImportantInfo();
+
+    function addPageNumbers() {
+      let sHeight = document.getElementById("account-summary-table").scrollHeight;
+      //footer height: 32px, header height: 48px
+      const totalPages = Math.ceil(Math.round((sHeight / 1038.6) * 10) / 10) + 3; //842px A4 pageheight for 72dpi, 1123px A4 pageheight for 96dpi,
+      for (let page = 1; page <= totalPages; page++) {
+        const pageNumberDiv = document.createElement("div");
+        pageNumberDiv.innerHTML = `Page <b>${page}</b> of <b>${totalPages}</b>`;
+        pageNumberDiv.style.position = "absolute";
+        pageNumberDiv.classList.add("page-counter");
+        pageNumberDiv.style.top =
+        "calc((" + (page - 1) + " * (297mm - 66.6px)) + 25.5px)"; //297mm A4 pageheight; 0,5px unknown needed necessary correction value; additional wanted 40px margin from bottom(own element height included)
+        pageNumberDiv.style.height = "14px";
+        pageNumberDiv.style.fontSize = "11px";
+        pageNumberDiv.style.fontFamily = `'Tahoma', sans-serif`;
+        pageNumberDiv.style.zIndex = 1;
+        pageNumberDiv.style.left =
+          "calc(100% - (" + pageNumberDiv.offsetWidth + "px + 175px))";
+        if (page != 1) {
+          document.body.append(pageNumberDiv);
+        }
+      }
+    }
+    addPageNumbers();
+  </script>
+</body>
+
+</html>
