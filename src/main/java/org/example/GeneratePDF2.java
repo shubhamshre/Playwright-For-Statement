@@ -100,6 +100,7 @@ public class GeneratePDF2 {
                     "    ]\n" +
                     "},\n" +
                     "]";
+                    System.out.println(usersData);
 
                     // passing javascript code to make HTML dynamic, example when transactions increases it will also increase
                     page.evaluate("const usersData = " + usersData + ";" +
